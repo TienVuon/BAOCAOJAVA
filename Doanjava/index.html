@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>EV Station Rental - Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #009688;
+      --light-teal: #E0F2F1;
+    }
+    body {
+      background-color: #FAFAFA;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .bg-teal { background-color: var(--teal) !important; }
+    .text-teal { color: var(--teal) !important; }
+    .border-teal { border: 1px solid var(--teal); }
+    .btn-teal {
+      background-color: var(--teal);
+      color: white;
+      border: none;
+      transition: 0.3s;
+    }
+    .btn-teal:hover { opacity: 0.85; }
+    .card {
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s ease-in-out;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    footer {
+      background-color: #212121;
+      color: white;
+      padding: 10px 0;
+      margin-top: 50px;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-teal shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">🔋 EV Station Rental</a>
+      <div class="navbar-nav">
+        <a class="nav-link active text-white" href="#">Trang chủ</a>
+        <a class="nav-link text-white" href="#">Đặt xe</a>
+        <a class="nav-link text-white" href="#">Lịch sử</a>
+        <a class="nav-link text-white" href="#">Đăng xuất</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="container py-5">
+    <h3 class="fw-bold text-teal mb-4 text-center">Xe điện có sẵn tại điểm thuê</h3>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Car 1 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card shadow-sm border-teal">
+          <img src="https://thanhnien.mediacdn.vn/uploaded/chicuong/2021_03_24/vf34/vfe34_white_NBTK.jpg?width=500" 
+               class="card-img-top" alt="VinFast VF e34">
+          <div class="card-body text-center">
+            <h5 class="card-title text-teal fw-bold">VinFast VF e34</h5>
+            <p class="card-text">🔋 Pin: 95%</p>
+            <p class="card-text fw-bold">💰 40 USD/ngày</p>
+            <button class="btn btn-teal w-100">Đặt xe</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Car 2 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card shadow-sm border-teal">
+          <img src="https://images.prismic.io/carwow/aCxkIidWJ-7kSVx9_TeslaModel32025exteriorfrontthreequarterviewdriving.jpg" 
+               class="card-img-top" alt="Tesla Model 3">
+          <div class="card-body text-center">
+            <h5 class="card-title text-teal fw-bold">Tesla Model 3</h5>
+            <p class="card-text">🔋 Pin: 87%</p>
+            <p class="card-text fw-bold">💰 75 USD/ngày</p>
+            <button class="btn btn-teal w-100">Đặt xe</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Car 3 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card shadow-sm border-teal">
+          <img src="data:image/jpeg;base64,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" 
+               class="card-img-top" alt="Hyundai Kona EV">
+          <div class="card-body text-center">
+            <h5 class="card-title text-teal fw-bold">Hyundai Kona EV</h5>
+            <p class="card-text">🔋 Pin: 91%</p>
+            <p class="card-text fw-bold">💰 55 USD/ngày</p>
+            <button class="btn btn-teal w-100">Đặt xe</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="text-center">
+    © 2025 BEBEHOUSE EV Rental — Designed by doanjava
+  </footer>
+
+</body>
+</html>
